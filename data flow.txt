@@ -1,0 +1,51 @@
+Data Flow:
+
+
+Client to Server (for requesting banner):
+
+id_info: array of <placement_id,info> tuple
+
+This is not used -> info is an array of <banner_id,count> tuple, shows which banner loaded how many times// NOT USED
+
+Ip,string, dummy 
+
+device_type, integer, 0 -> desktop
+                      1 -> mobile
+                      2 -> tab
+
+Client to Server (for updating click):
+
+<placement_id, banner_id> tuple
+
+example: 
+placement_id:palo2
+banner_id:banner_2 
+
+
+Server to client (response of banner request ) :
+
+array of <placement_id, banner_id, content_url, target_url, caption, type, content_width, content_height, placement_width, placement_height>
+
+type is of String type
+'image' for jpeg or gif
+'flash' for swf files
+
+
+*** content types
+
+image
+flash
+html5
+
+//for ip
+//https://www.chriswiegman.com/2014/05/getting-correct-ip-address-php/
+//http://l2.io/ (javascript)
+//http://stackoverflow.com/questions/17414972/get-ip-address-with-javascript
+
+//for view
+//http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport/7557433#7557433
+//http://imakewebthings.com/waypoints/
+//viewport plugin jquery
+
+//for html5
+//http://stackoverflow.com/questions/28917703/wrap-href-around-an-iframe
